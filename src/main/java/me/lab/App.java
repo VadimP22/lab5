@@ -3,8 +3,9 @@ package me.lab;
 import java.util.Scanner;
 
 /**
- * Hello world!
- *
+ * Main class
+ * @author Petrov Vadim
+ * 
  */
 public class App 
 {
@@ -27,7 +28,7 @@ public class App
             }
         }
 
-
+        
     }
 
 
@@ -35,6 +36,9 @@ public class App
     {
         Exit exit = new Exit();
         commandProcessor.register("exit", exit);
+
+        Help help = new Help();
+        commandProcessor.register("help", help);
     }
 
 

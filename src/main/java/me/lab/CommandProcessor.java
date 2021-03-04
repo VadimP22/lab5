@@ -2,6 +2,10 @@ package me.lab;
 
 import java.util.HashMap;
 
+
+/**
+ * Обрабатывает строку, введённую пользователем, и исполняет команду (invoker короче)
+ */
 public class CommandProcessor {
     private HashMap<String, Command> commandsMap = new HashMap<>();
     
