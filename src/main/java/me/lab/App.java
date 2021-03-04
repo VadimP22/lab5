@@ -1,5 +1,6 @@
 package me.lab;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -9,12 +10,19 @@ import java.util.Scanner;
  */
 public class App 
 {
+
+    public static LinkedList<MusicBand> bands = new LinkedList<>();
+    public static MusicBandGenerator bandGenerator = new MusicBandGenerator();
+
     public static void main( String[] args )
     {
         CommandProcessor commandProcessor = new CommandProcessor();
-        registerCommands(commandProcessor);
 
         Scanner scanner = new Scanner(System.in);
+        bandGenerator.setScanner(scanner);
+        registerCommands(commandProcessor);
+
+        
 
         System.out.println();
 
@@ -39,6 +47,9 @@ public class App
 
         Help help = new Help();
         commandProcessor.register("help", help);
+
+        Debug debug = new Debug(bandGenerator, bands);
+        commandProcessor.register("debug", debug);
     }
 
 
