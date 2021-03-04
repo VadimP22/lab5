@@ -45,6 +45,7 @@ class Coordinates {
 
 
 class Label {
+    
     private Long sales; //Поле может быть null, Значение поля должно быть больше 0
 }
 

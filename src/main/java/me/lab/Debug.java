@@ -2,7 +2,7 @@ package me.lab;
 
 import java.util.LinkedList;
 
-import javax.swing.plaf.synth.SynthConstants;
+
 
 public class Debug implements Command {
 
